@@ -34,10 +34,14 @@ export default class Loader extends React.Component {
       };
       const El = React.createElement(this.props.component, props, children);
 
-      return React.createElement(this.props.component, { className: 'relative' }, [
-        <Spinner className="absolute" key="loader" />,
-        El,
-      ]);
+      return React.createElement(
+        this.props.component,
+        {
+          className: 'relative',
+          style: { display: 'flex', alignItems: 'center', justifyContent: 'center' },
+        },
+        [<Spinner className="absolute" key="loader" />, El],
+      );
     } else {
       props = { key: 'content', className: `${this.props.loadedClassName} visible` };
       return React.createElement(this.props.component, props, children);

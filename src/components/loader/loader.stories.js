@@ -27,6 +27,12 @@ class BasicLoader extends React.Component {
           <span className="hello">This is the content</span>
           <br />
           <span>And</span>
+          <br />
+          <span>And</span>
+          <br />
+          <span>And</span>
+          <br />
+          <span>And</span>
         </Loader>
         <Button onClick={this.btnClick} size="small">
           Show spinner
